@@ -1,5 +1,5 @@
 # Middle square method
-Middle-square method is a method of generating pseudorandom numbers.
+Middle-square is a method of generating pseudorandom numbers.
 
 Simple implementation in C
 
