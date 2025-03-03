@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <time.h>
 
 unsigned int middle_square(unsigned int seed, int n) {
   unsigned long long square = (unsigned long long) seed * seed;
@@ -19,13 +20,9 @@ unsigned int middle_square(unsigned int seed, int n) {
 }
 
 int main(int argc, char *argv[]) {
-  printf("Enter seed: ");
-  unsigned int seed;
-  scanf("%d", &seed);
-
-  printf("Enter digits: ");
-  int digits;
-  scanf("%d", &digits);
+  time_t t = time(NULL);
+  unsigned long long seed = t * t;
+  int digits = 4;
 
   int num = middle_square(seed, digits);
   int randomNumber = middle_square(num, digits);
